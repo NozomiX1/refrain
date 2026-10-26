@@ -1,0 +1,19 @@
+{
+  "name": "refrain",
+  "owner": {
+    "name": "nozomi"
+  },
+  "description": "refrain: long-term memory for Claude Code, and its companion refrain-timer.",
+  "plugins": [
+    {
+      "name": "refrain",
+      "source": "./",
+      "description": "Long-term memory for Claude Code: a background scribe keeps knowledge, state and summaries from your sessions."
+    },
+    {
+      "name": "refrain-timer",
+      "source": "./timer",
+      "description": "Companion of refrain: starts the idle compaction once the prompt cache has expired."
+    }
+  ]
+}

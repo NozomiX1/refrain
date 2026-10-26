@@ -1,0 +1,42 @@
+{
+  "name": "refrain",
+  "version": "0.0.1",
+  "description": "Long-term memory for Claude Code: a background scribe keeps knowledge, state and summaries from your sessions.",
+  "author": {
+    "name": "nozomi"
+  },
+  "license": "MIT",
+  "dependencies": [
+    "refrain-timer"
+  ],
+  "userConfig": {
+    "idleCompaction": {
+      "type": "boolean",
+      "title": "空闲压缩",
+      "description": "缓存过期以后，下一次请求之前把上文换成交接（摘要加最近的原文），省掉一次全价重读。",
+      "default": true
+    },
+    "idleMinTokens": {
+      "type": "number",
+      "title": "空闲压缩的上文下限（token）",
+      "description": "上文小于这个数时不做空闲压缩：能省的不多，却要把原文换成摘要。",
+      "default": 60000
+    },
+    "scribeMinChars": {
+      "type": "number",
+      "title": "书记员的触发量（字）",
+      "description": "书签之后新增的对话攒到这么多字，书记员才整理一次。越小记得越及时，花费也越多。",
+      "default": 20000
+    },
+    "scribeModel": {
+      "type": "string",
+      "title": "书记员用的模型",
+      "description": "整理记忆的后台子 agent 用哪个模型。",
+      "options": [
+        "haiku",
+        "sonnet"
+      ],
+      "default": "haiku"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "refrain-timer",
+  "version": "0.0.1",
+  "description": "Companion of refrain: starts the idle compaction once the prompt cache has expired.",
+  "author": {
+    "name": "nozomi"
+  },
+  "license": "MIT"
+}

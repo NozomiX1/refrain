@@ -1,0 +1,19 @@
+{
+  "name": "refrain",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.spec.ts\"",
+    "test:mod": "claude plugin test .",
+    "check": "tsc -p .",
+    "check:mod": "tsc -p .claude-plugin/types/tsconfig.json && tsc -p timer"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "^7.0.2"
+  }
+}
